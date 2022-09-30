@@ -1,0 +1,234 @@
+:root{
+    --skinDefaultDisabledBtnColor: rgb(202, 202, 202); 
+    --skinDefaultEnabledBtnColor: rgb(94, 94, 94);   
+    --backgroundColorWM: rgb(245, 245, 245); 
+    --articleContentColrWM: white;
+}
+
+/* flex setting */
+.flex{
+    display: flex;
+}
+
+.flex-centerX{
+    justify-content: center;
+}
+
+.flex-centerY{
+    align-items: center;
+}
+
+
+#cafe-body:has(#naver-gnb){
+    margin-left: 14rem;
+    width: 860px !important;
+}
+
+#group-area{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 14rem !important;
+    background-color: var(--backgroundColorWM);
+    z-index: 10;
+}
+#main-area{
+    float: left;
+}
+#content-area:has(#group-area){
+    padding: 0 auto;
+    margin: 0 15rem !important;
+}
+iframe #content-area{
+    margin: 0 !important;
+}
+
+
+#cafe-body{
+    margin: 0 !important;
+    background-color: var(--backgroundColorWM);
+}
+
+
+
+#upperArticleList>table>tbody>tr:nth-child(n+7)[class~="_noticeArticle"]{
+    display: none;
+}
+#cafe-info-action[class~="none"]{
+    display: none;
+}
+
+#cafe-menu>.box-g-m{
+    position: fixed;
+    height: calc(100% - 19.3rem);
+    overflow: auto;
+}
+
+#cafe-menu > .box-g-m::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: transparent;
+}
+#cafe-menu > .box-g-m::-webkit-scrollbar-thumb {
+    width: 0.3rem;
+    background-color: #d3d3d3;
+    border-radius: 0.25rem;
+}
+#cafe-menu > .box-g-m::-webkit-scrollbar-track {
+    background-color: transparent;
+    width: 0.6rem;
+}
+
+#cafe-menu>.box-g-m>*:nth-child(-n+2){
+    display: none;
+}
+#group-area>.com, #group-area>.banner_chatbot{
+    display: none;
+}
+#u_skip{
+    display: none;
+}
+
+
+
+/* skin 1080 */
+
+#cafe-info-data>ul, #member-action-data>ul{
+    border-top: 0;
+}
+
+#cafe-info-data>.area_info_box, #cafe-info-data>#ia-info-data-emblem, #cafe-info-data>.ia-info-btn{
+    display: none;
+}
+
+#cafe-info-data>.cafe-write-btn{
+    margin: 0 5px;
+}
+
+
+html, body, #cafe-body-skin, #app>.layout_content, #cafe-info-action{
+    background-color: var(--backgroundColorWM) !important;
+}
+
+#app .ArticleContentBox{
+    background-color: var(--articleContentColrWM);
+}
+
+
+.wv_cafeCategory{
+    width: calc(100% - 2rem);
+    margin: 0 1rem 0.5rem 1rem;
+}
+
+.wv_cafeCategory>div{
+    cursor: pointer;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.6rem;
+    background-color: var(--skinDefaultDisabledBtnColor);
+    border-radius: 0.3rem;
+}
+.wv_cafeCategory>div[class~="enabled"]{
+    background-color: var(--skinDefaultEnabledBtnColor);
+}
+
+
+.power_ad{
+    display: none;
+}
+
+
+/* 헤더 고정 */
+#naver-gnb{
+    width: 100% !important;
+    position: fixed !important;
+    background-color: white;
+    top: 0;
+    left: 0;
+    height: 3rem !important;
+    display: flex;
+    min-width: 1060px;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 3px 5px 3px rgb(214, 214, 214); */
+}
+.link_naver{
+    margin-top: 0px !important;
+    margin-left: 2rem !important;
+}
+
+#gnb-menu{
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+    margin-left: auto;
+}
+
+#naver-h, #button_town_cafe, #button_join_cafe, #button_mynews_alarm, #button_mynews_activity, .chatting-cafe{
+    margin-top: 0 !important;
+}
+
+#gnb_my_namebox, #gnb_service_layer{
+    padding-top: 0px !important;
+}
+
+#gnb_lst{
+    display: flex !important;
+    align-items: center;
+}
+
+#gnb_my_namebox{
+    padding-top: 1.5px !important;
+}
+
+#front-img, #group-area{
+    margin-top: 3.5rem !important;
+}
+
+#front-img{
+    margin: 0 15rem !important;
+    padding-top: 0.7rem;
+    padding-bottom: 20px;
+}
+
+footer{
+    margin: 0 15rem !important;
+    width: 770px !important;
+}
+
+/* 사이즈 조정 */
+
+/* #front-img{
+    margin: 3rem 0 auto 0 !important;
+} */
+
+
+#front-img, #front-img *, #content-area{
+    max-width: 860px;
+}
+/* 
+iframe #cafe-body{
+    padding-left: 0 !important;
+} */
+
+
+
+
+/* 댓글창 업 다운 */
+.CommentBox{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+.comment_option{
+    order: 0;
+}
+.comment_list{
+    order: 2;
+}
+.ArticlePaginate{
+    order: 3;
+}
+.CommentWriter{
+    order: 1;
+    margin-bottom: 1rem !important;
+}

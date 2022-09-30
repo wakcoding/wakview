@@ -1,6 +1,6 @@
 {
     "name": "왁뷰 wakview",
-    "version": "2.0",
+    "version": "2.0.0",
     "manifest_version": 3,
     "description": "왁물원 전용 확장프로그램",
     "permissions": [
@@ -14,21 +14,21 @@
       {
         "matches": ["https://cafe.naver.com/*"], 
         "run_at": "document_idle",
-        "js": ["js/jquery-3.6.0.min.js", "embed.js", "common.js", "blocking_script.js", "content_script.js"],
-        "css": ["fantastic.css", "bestArticle.css", "deepdarknaver.css", "deepdark1080_cafe-1593151221000-219709.css"],
+        "js": ["js/jquery-3.6.1.min.js", "js/content/default.js", "js/content/side.js", "js/content/blocking.js"],
+        "css": ["css/layout.css", "css/newLayout.css", "css/darkmode.css", "css/darkmode-new.css"],
         "all_frames": true
       }
     ],
     "background": {
-      "service_worker": "blocking_context_menu.js"
+      "service_worker": "js/background/background.js"
     },
     "action": {
       
     },
     "icons": {
-      "16": "images/icons/16.png",
-      "32": "images/icons/32.png",
-      "48": "images/icons/48.png",
-      "128": "images/icons/128.png"
+      "16": "img/icon/16.png",
+      "32": "img/icon/32.png",
+      "48": "img/icon/48.png",
+      "128": "img/icon/128.png"
     }
 }
